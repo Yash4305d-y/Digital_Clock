@@ -1,4 +1,8 @@
-Hello Everyone
+
+# Digital Clock
+
+A Digital Clock capable showing time in 24hr and 
+12hr format
 
 
-A Digital clock, capable showing time in (24hr format) as well as (12hr format)
+
