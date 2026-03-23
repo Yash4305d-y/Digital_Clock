@@ -64,46 +64,7 @@ gcc clock.c -o clock
     <li>Uses loop with delay to update every second</li>
 </ul>
 
-<hr>
 
-<h2>📌 Example Code Snippet</h2>
-
-<pre>
-#include &lt;stdio.h&gt;
-#include &lt;time.h&gt;
-#include &lt;unistd.h&gt;
-
-int main() {
-    while (1) {
-        time_t now;
-        struct tm *local;
-
-        time(&now);
-        local = localtime(&now);
-
-        // 24-hour format
-        printf("24-Hour: %02d:%02d:%02d\n",
-               local->tm_hour,
-               local->tm_min,
-               local->tm_sec);
-
-        // 12-hour format
-        int hour = local->tm_hour % 12;
-        if (hour == 0) hour = 12;
-
-        printf("12-Hour: %02d:%02d:%02d %s\n",
-               hour,
-               local->tm_min,
-               local->tm_sec,
-               (local->tm_hour >= 12) ? "PM" : "AM");
-
-        sleep(1);
-    }
-    return 0;
-}
-</pre>
-
-<hr>
 
 <h2>📢 Notes</h2>
 <ul>
